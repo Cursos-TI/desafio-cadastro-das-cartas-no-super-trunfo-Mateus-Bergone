@@ -5,7 +5,8 @@ int main() {
     //Carta 1
     char Estado[50], Código[50], NomedaCidade[50];
     int NumeroDePontosTuristicos;
-    float Area, PIB, Densidadepopulacional, PIBpercapita, Populacao;
+    float Area, PIB, Densidadepopulacional, PIBpercapita, Populacao; 
+    float soma;
 
     printf("Carta 1\n\n");
 
@@ -38,12 +39,16 @@ int main() {
     PIBpercapita = PIB / Populacao;
     printf("%.2f\n", PIBpercapita);
 
+    soma = Densidadepopulacional + PIBpercapita + NumeroDePontosTuristicos + Area + PIB + Populacao;
+    printf("Super poder: %.2f\n", soma);
+
     printf("\n");
 
     //Carta 2
     char Estado2[50], Código2[50], NomedaCidade2[50];
     int NumeroDePontosTuristicos2;
     float Area2, PIB2, Densidadepopulacional2, PIBpercapita2, Populacao2;
+    float soma2;
 
     printf("Carta 2\n\n");
 
@@ -75,6 +80,38 @@ int main() {
     printf("Qual o PIB per capita da cidade?\n");
     PIBpercapita2 = PIB2 / Populacao2;
     printf("%.2f\n", PIBpercapita2);
+
+    soma2 = (Densidadepopulacional2 + PIBpercapita2 + (float)NumeroDePontosTuristicos2 + Area2 + PIB2 + Populacao2);
+    printf("Super poder2: %.2f\n", soma2);
+
     printf("\n");
+
+    //Comparação de cartas
+    const char *mensagens[] = {"Carta 2 venceu", "Carta 1 venceu"};
+    int resultado;
+
+    resultado = Populacao > Populacao2 ? 1 : 0;
+    printf("População: %s (%d)\n", mensagens[resultado], resultado);
+
+    resultado = Area > Area2 ? 1 : 0;
+    printf("Área: %s (%d)\n", mensagens[resultado], resultado);
+
+    resultado = PIB > PIB2 ? 1 : 0;
+    printf("PIB: %s (%d)\n", mensagens[resultado], resultado);
+
+    resultado = NumeroDePontosTuristicos > NumeroDePontosTuristicos2 ? 1 : 0;
+    printf("Número de Pontos Turísticos: %s (%d)\n", mensagens[resultado], resultado);
+
+    resultado = Densidadepopulacional < Densidadepopulacional2 ? 1 : 0;
+    printf("Densidade Populacional: %s (%d)\n", mensagens[resultado], resultado);
+
+    resultado = PIBpercapita > PIBpercapita2 ? 1 : 0;
+    printf("PIB per capita: %s (%d)\n", mensagens[resultado], resultado);
+
+    resultado = soma > soma2 ? 1 : 0;
+    printf("Super poder: %s (%d)\n", mensagens[resultado], resultado);
+
+    printf("\n");
+    
     return 0;
 }
