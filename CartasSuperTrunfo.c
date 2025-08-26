@@ -5,7 +5,8 @@ int main() {
     //Carta 1
     char Estado[50], Código[50], NomedaCidade[50];
     int NumeroDePontosTuristicos;
-    float Area, PIB, Densidadepopulacional, PIBpercapita, Populacao; 
+    float Area, PIB, Densidadepopulacional, PIBpercapita; 
+    unsigned long int Populacao; 
     float soma;
 
     printf("Carta 1\n\n");
@@ -20,7 +21,7 @@ int main() {
     scanf("%s", NomedaCidade);
 
     printf("Qual a população da cidade?\n");
-    scanf("%f", &Populacao);
+    scanf("%lu", &Populacao);
 
     printf("Qual a área da cidade?\n");
     scanf("%f", &Area);
@@ -47,7 +48,8 @@ int main() {
     //Carta 2
     char Estado2[50], Código2[50], NomedaCidade2[50];
     int NumeroDePontosTuristicos2;
-    float Area2, PIB2, Densidadepopulacional2, PIBpercapita2, Populacao2;
+    float Area2, PIB2, Densidadepopulacional2, PIBpercapita2; 
+    unsigned long int Populacao2;
     float soma2;
 
     printf("Carta 2\n\n");
@@ -62,7 +64,7 @@ int main() {
     scanf("%s", NomedaCidade2);
 
     printf("Qual a população da cidade?\n");
-    scanf("%f", &Populacao2);
+    scanf("%lu", &Populacao2);
 
     printf("Qual a área da cidade?\n");
     scanf("%f", &Area2);
